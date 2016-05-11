@@ -5,6 +5,7 @@
 \usepackage[russian]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{physics}
 \graphicspath{{../}}
 \DeclareGraphicsExtensions{.png}
 
@@ -208,9 +209,17 @@ n=256 ~e=0.00000161
 \end{equation}
 
 Домножим уравнение $\Delta u = 0$ на пробную функцию $v$ и проинтегрируем по области $\Omega = (0,R)\times(0,h)$ и рассмотрим левую часть:
-\begin{equation*}
-\int\limits_{\Omega_{X}} \Delta_{(x,y,z)} u v d\Omega_{X} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \cfrac{\partial^2u}{\partial \rho^2}v\rho + \cfrac{\partial^2u}{\partial z^2}v\rho \right) d\Omega = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \Delta u v\rho \right) d\Omega
-\end{equation*}
+\begin{equation}\label{laplace_cylindric}
+	\int\limits_{\Omega_{X}} (\Delta_{(x,y,z)} u) v d\Omega_{X} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \cfrac{\partial^2u}{\partial \rho^2}v\rho + \cfrac{\partial^2u}{\partial z^2}v\rho \right) d\Omega = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \Delta u v\rho \right) d\Omega.
+\end{equation}
+\begin{equation}\label{sub_laplace_cylindric}
+	\int\limits_{\Omega} \left( \Delta u v\rho \right) \dd{\Omega} = \int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v\rho}\dd{\Omega}=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}-\int\limits_{\Omega}\pdv{u}{\rho}v\dd{\Omega}.
+\end{equation}
+Подставляя (\ref{sub_laplace_cylindric}) в (\ref{laplace_cylindric}), получаем
+\begin{equation}
+	a(u,v)=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega},
+\end{equation}
+где $$a(u,v)=0.$$
 
 \end{document}
 
