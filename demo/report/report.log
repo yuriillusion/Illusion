@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.11)  11 MAY 2016 15:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.11)  11 MAY 2016 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1753,77 +1753,79 @@ e
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 [1
 
-] <../dolfin_plot_0.png, id=24, 602.25pt x 401.5pt>
+] [2]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
+<../dolfin_plot_0.png, id=27, 602.25pt x 401.5pt>
 File: ../dolfin_plot_0.png Graphic file (type png)
-
-<use ../dolfin_plot_0.png>
+ <use ../dolfin_plot_0.png>
 Package pdftex.def Info: ../dolfin_plot_0.png used on input line 112.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
- <../dolfin_plot_1.png, id=25, 602.25pt x 401.5pt>
-File: ../dolfin_plot_1.png Graphic file (type png)
 
-<use ../dolfin_plot_1.png>
+<../dolfin_plot_1.png, id=28, 602.25pt x 401.5pt>
+File: ../dolfin_plot_1.png Graphic file (type png)
+ <use ../dolfin_plot_1.png>
 Package pdftex.def Info: ../dolfin_plot_1.png used on input line 113.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
- [2 <../dolfin_plot_0.png (PNG copy)> <../dolfin_plot_1.png (PNG copy)>] [3]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
-<../dolfin_plot_5.png, id=33, 602.25pt x 401.5pt>
+
+[3
+
+] [4 <../dolfin_plot_0.png (PNG copy)> <../dolfin_plot_1.png (PNG copy)>]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
+<../dolfin_plot_5.png, id=35, 602.25pt x 401.5pt>
 File: ../dolfin_plot_5.png Graphic file (type png)
  <use ../dolfin_plot_5.png>
 Package pdftex.def Info: ../dolfin_plot_5.png used on input line 152.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
 
-<../dolfin_plot_4.png, id=34, 602.25pt x 401.5pt>
+<../dolfin_plot_4.png, id=36, 602.25pt x 401.5pt>
 File: ../dolfin_plot_4.png Graphic file (type png)
  <use ../dolfin_plot_4.png>
 Package pdftex.def Info: ../dolfin_plot_4.png used on input line 153.
 (pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
 
-[4
+[5
 
  <../dolfin_plot_5.png (PNG copy)> <../dolfin_plot_4.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[5]
-{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-<../contour.png, id=41, 586.8324pt x 442.2924pt>
-File: ../contour.png Graphic file (type png)
- <use ../contour.png>
-Package pdftex.def Info: ../contour.png used on input line 188.
-(pdftex.def)             Requested size: 293.41548pt x 221.14566pt.
- [6
+[6]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
+[7
 
- <../contour.png>] [7] (./report.aux) ) 
+]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 5.
+[8
+
+] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 9698 strings out of 494515
- 166346 string characters out of 6173718
- 222056 words of memory out of 5000000
- 12761 multiletter control sequences out of 15000+600000
- 17555 words of font info for 46 fonts, out of 8000000 for 9000
+ 9693 strings out of 494515
+ 166262 string characters out of 6173718
+ 223075 words of memory out of 5000000
+ 12758 multiletter control sequences out of 15000+600000
+ 16736 words of font info for 45 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 45i,11n,39p,10427b,232s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/illusion/.texmf-var/fonts/pk/ljf
-our/lh/lh-t2a/labx1200.600pk> </home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-
-t2a/larm1000.600pk> </home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx14
-40.600pk> </home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2488.600pk> 
-</home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/ill
-usion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/illusion/.tex
-mf-var/fonts/pk/ljfour/lh/lh-t2a/larm1728.600pk></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (8 pages, 438708 bytes).
+ 45i,11n,39p,10427b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm100
+0.600pk> </home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> <
+/home/illusion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2488.600pk> </home/illu
+sion/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/illusion/.texm
+f-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/illusion/.texmf-var/font
+s/pk/ljfour/lh/lh-t2a/larm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on report.pdf (9 pages, 399562 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 294 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

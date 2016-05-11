@@ -79,7 +79,7 @@
 	u(x,y) = \sum_{n=1}^{\infty}C_n \sh{\mu_n y} \sin{\mu_n x}
 \end{equation}
 \begin{equation*}
-	C_n = \frac{2}{b sh{\mu_n b}}\int_0^b f(x) \sin{\mu_n x} dx = \frac{2\alpha}{b\sh{\mu_n b}}\int_l^r\sin{\mu_nx}dx =  \frac{2\alpha}{b\mu_n\sh{\mu_n b}}(\cos{\mu_n l} - \cos{\mu_n r})=
+	C_n = \frac{2}{b sh{\mu_n b}}\int_0^b f(x) \sin{\mu_n x} \dd{x} = \frac{2\alpha}{b\sh{\mu_n b}}\int_l^r\sin{\mu_nx}\dd{x} =  \frac{2\alpha}{b\mu_n\sh{\mu_n b}}(\cos{\mu_n l} - \cos{\mu_n r})=
 \end{equation*}
 \begin{equation}
 	=\frac{4\alpha}{b\mu_n\sh{\mu_n b}}\sin{\frac{\mu_n}{2}(l+r)}\sin{\frac{\mu_n}{2}(r-l)}.
@@ -89,23 +89,23 @@
 	u(x,y)=\frac{4\alpha}{b}\sum_{n=1}^{\infty}\frac{\sin{\left(\frac{\mu_n}{2}(l+r)\right)}\sin{\left(\frac{\mu_n}{2}(r-l)\right)}}{\mu_n\sh{\mu_n b}}\sh{\mu_n y} \sin{\mu_n x}.
 \end{equation}
 
-\section{Решение методом конечных элементов}
+\chapter{Решение методом конечных элементов}
 
-\subsection{Слабая формулировка задачи}
+\section{Слабая формулировка задачи}
 Домножим уравнение $\Delta u = 0$ на пробную функцию $v$ и проинтегрируем по области $\Omega = (0,a)\times(0,b)$:
 \begin{equation}
-	\int_{\Omega}v \Delta u dx=0.
+	\int_{\Omega}v \Delta u \dd{\Omega}=0.
 \end{equation}
 По формуле интегрирования по частям,
 \begin{equation}
-	\int_{\Omega}v \Delta u dx=\int_{\partial \Omega}v\frac{\partial u}{\partial n}ds-\int_{\Omega}\nabla v\nabla u dx=-\int_{\Omega}\nabla v \nabla u dx.
+	\int_{\Omega}v \Delta u \dd{\Omega}=\int_{\partial \Omega}v\frac{\partial u}{\partial n}\dd{S}-\int_{\Omega}\nabla v\nabla u \dd{\Omega}=-\int_{\Omega}\nabla v \nabla u \dd{\Omega}.
 \end{equation}
 Слабая формулировка задачи:
 \begin{equation}\label{weak_form}
-	\int_{\Omega} \nabla v \nabla u dx=0
+	\int_{\Omega} \nabla v \nabla u \dd{\Omega}=0
 \end{equation}
 
-\subsection{Визуализация}
+\section{Визуализация}
 Визуализация для случая $a=b=1$, $n=30$, $\alpha = 0.05$.
 %\begin{center}
 \begin{figure}[t]
@@ -113,21 +113,21 @@
 	\includegraphics[scale=0.4]{dolfin_plot_1.png}
 	\caption{Визуализация потенциала и напряжённости, полученных методом конечных элементов}
 	\centering
-%\end{center}
+	%\end{center}
 \end{figure}
 
-\subsection{Оценка скорости сходимости численного решения}
+\section{Оценка скорости сходимости численного решения}
 Зададим шаг равномерной прямоугольной сетки $h=\frac{1}{n}$. Произведём эксперименты с $h_0>h_1>h_2>...$ и получим соответствующие невязки $e_0, e_1, e_2, ...$. Предположим, что $e_i=Ch_i^r$. По результатам 2-ух экспериментов можно оценить $r$:
 \begin{equation}
 	r = \frac{\ln{\frac{e_{i+1}}{e_i}}}{\ln{\frac{h_{i+1}}{h_i}}}.
 \end{equation}
 \begin{center}
-Результат:\\
-n=  8 e=0.00057016 r=-0.285764\\
-n= 16 e=0.00069505 r=2.118793\\
-n= 32 e=0.00016003 r=-0.557871\\
-n= 64 e=0.00023558 r=2.017781\\
-n=128 e=0.00005817 r=-0.613936\\
+	Результат:\\
+	n=  8 e=0.00057016 r=-0.285764\\
+	n= 16 e=0.00069505 r=2.118793\\
+	n= 32 e=0.00016003 r=-0.557871\\
+	n= 64 e=0.00023558 r=2.017781\\
+	n=128 e=0.00005817 r=-0.613936\\
 \end{center}
 
 \chapter{Решение задачи на прямоугольной области с непрерывными граничными условиями Дирихле}
@@ -147,7 +147,7 @@ n=128 e=0.00005817 r=-0.613936\\
 \end{equation}
 
 \section{Решение методом конечных элементов}
-\subsection{Визуализация}
+\section{Визуализация}
 \begin{figure}[h]
 	\includegraphics[scale=0.4]{dolfin_plot_5.png}
 	\includegraphics[scale=0.4]{dolfin_plot_4.png}
@@ -155,42 +155,39 @@ n=128 e=0.00005817 r=-0.613936\\
 	\centering
 \end{figure}
 
-\subsection{Оценка скорости сходимости численного решения}
+\section{Оценка скорости сходимости численного решения}
 Зададим шаг равномерной прямоугольной сетки $h=\frac{1}{n}$. Произведём эксперименты с $h_0>h_1>h_2>...$ и получим соответствующие невязки $e_0, e_1, e_2, ...$. Предположим, что $e_i=Ch_i^r$. По результатам 2-ух экспериментов можно оценить $r$:
 \begin{equation}
 	r = \frac{\ln{\frac{e_{i+1}}{e_i}}}{\ln{\frac{h_{i+1}}{h_i}}}.
 \end{equation}
 Результат:\\
 \begin{center}
-n=~~4~e=0.00658808 ~r=1.999999999999993\\
-n=~~8~ e=0.00164702~ r=1.999999999999982\\
-n=~16 ~e=0.00041175~ r=1.999999999999973\\
-n=~32 ~e=0.00010294~ r=1.999999999999943\\
-n=~64 ~e=0.00002573~ r=1.999999999999871\\
-n=128 ~e=0.00000643~ r=1.999999999999731\\
-n=256 ~e=0.00000161
+	n=~~4~e=0.00658808 ~r=1.999999999999993\\
+	n=~~8~ e=0.00164702~ r=1.999999999999982\\
+	n=~16 ~e=0.00041175~ r=1.999999999999973\\
+	n=~32 ~e=0.00010294~ r=1.999999999999943\\
+	n=~64 ~e=0.00002573~ r=1.999999999999871\\
+	n=128 ~e=0.00000643~ r=1.999999999999731\\
+	n=256 ~e=0.00000161
 \end{center}
 Можно сделать вывод, что погрешность метода имеет квадратичную зависимость от шага сетки.
 
-\chapter{Решение задачи в цилиндрических координатах}
+\chapter{Решение задачи для бесконечной заряженной пластины}
 \section{Постановка задачи}
 \begin{equation}
 	\begin{cases}
 		\Delta u = 0,\\
-		u|_{r=a}=\cfrac{1}{a},\\
-		u|_{r=b}=\cfrac{1}{b}.
+		u|_{z=0}=I_{[-l,l]}!!!,\\
+		!!!
 	\end{cases}
 \end{equation}
 
-\section{Визуализация}
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{contour.png}
-	\caption{График изолиний}
-\end{figure}
+Заменим условие на бесконечности условием на достаточно большом радиусе $R$, так как заряженный диск на больших расстояниях можно считать точечным зарядом.
 
-\section{Задача для тонкого диска}
-\subsection{Постановка задачи}
+Отметим, что решение задачи не зависит от $x$, симметрично относительно $x=0$ и $y=0$ и сведём трёхмерную задачу к двухмерной задаче на прямоугольнике $[0, L]\times[0, L]$.
+
+\chapter{Задача для тонкого диска}
+\section{Постановка задачи}
 \begin{equation}
 	\begin{cases}
 		\Delta u = 0,\\
@@ -198,11 +195,21 @@ n=256 ~e=0.00000161
 		!!!
 	\end{cases}
 \end{equation}
-\subsection{Слабая формулировка задачи}
-Заменим условие на бесконечности условием на достаточно большом радиусе, так как заряженный диск можно считать точечным зарядом на больших расстояниях.
 
-Также, воспользуемся осевой симметрией и сведём трёхмерную задачу на цилиндре к двумерной задаче на прямоугольнике переходом от декартовых координат к цилиндрическим.
+Заменим условие на бесконечности условием на достаточно большом радиусе $R$, так как заряженный диск на больших расстояниях можно считать точечным зарядом.
 
+Воспользуемся тем, что решение не зависит от $\varphi$, симметрично относительно $\rho=0$ и $z=0$ и сведём трёхмерную задачу к двухмерной задаче на прямоугольнике $[0, R]\times[0,R]$.
+\begin{equation}\label{disk_problem}
+	\begin{cases}
+		\Delta u = 0,\\
+		\pdv{u}{\rho}\Bigr|_{\rho=0}=0,\\
+		u|_{\rho=R}=!!!,\\
+		u|_{z=R}=!!!,\\
+		\pdv{u}{z}\Bigr|_{z=0}=I_{[0,R]}!!!.
+	\end{cases}
+\end{equation}
+
+\section{Слабая формулировка задачи}
 Оператор Лапласа в цилиндрических координатах:
 \begin{equation}
 	\Delta u = \cfrac{1}{\rho}\cfrac{\partial}{\partial \rho}\left(\rho\cfrac{\partial u}{\partial \rho}\right) + \cfrac{1}{\rho^2}\cfrac{\partial^2u}{\partial \varphi^2}+\cfrac{\partial^2u}{\partial z^2}.
@@ -210,16 +217,19 @@ n=256 ~e=0.00000161
 
 Домножим уравнение $\Delta u = 0$ на пробную функцию $v$ и проинтегрируем по области $\Omega = (0,R)\times(0,h)$ и рассмотрим левую часть:
 \begin{equation}\label{laplace_cylindric}
-	\int\limits_{\Omega_{X}} (\Delta_{(x,y,z)} u) v d\Omega_{X} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \cfrac{\partial^2u}{\partial \rho^2}v\rho + \cfrac{\partial^2u}{\partial z^2}v\rho \right) d\Omega = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \Delta u v\rho \right) d\Omega.
+	\int\limits_{\Omega_{X}} (\Delta_{(x,y,z)} u) v \dd{\Omega_{X}} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \cfrac{\partial^2u}{\partial \rho^2}v\rho + \cfrac{\partial^2u}{\partial z^2}v\rho \right) \dd{\Omega} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \Delta u v\rho \right) \dd{\Omega}.
 \end{equation}
 \begin{equation}\label{sub_laplace_cylindric}
 	\int\limits_{\Omega} \left( \Delta u v\rho \right) \dd{\Omega} = \int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v\rho}\dd{\Omega}=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}-\int\limits_{\Omega}\pdv{u}{\rho}v\dd{\Omega}.
 \end{equation}
 Подставляя (\ref{sub_laplace_cylindric}) в (\ref{laplace_cylindric}), получаем
 \begin{equation}
-	a(u,v)=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega},
+	a(u,v)=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}.
 \end{equation}
-где $$a(u,v)=0.$$
+Таким образом, слабая формулировка задачи (\ref{disk_problem}):
+\begin{equation}\label{disk_weak}
+	\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}-\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}=0.
+\end{equation}
 
 \end{document}
 
