@@ -1,0 +1,95 @@
+\newpage
+\centerline{\textbf{РЕФЕРАТ}}
+\vspace{0.3cm}
+
+\textit{Курсовая работа}, .
+
+\vspace{0.1cm}
+
+{ ЭЛЕКТРОСТАТИКА, ЭЛЕКТРИЧЕСКОЕ ПОЛЕ, МЕТОД КОНЕЧНЫХ ЭЛЕМЕНТОВ, АСИМПТОТИЧЕСКИЕ ГРАНИЧНЫЕ УСЛОВИЯ, УРАВНЕНИЕ ЛАПЛАСА, FENICS, PYTHON }
+
+\vspace{0.1cm}
+
+\textit{Объект исследования} ~--- двумерные электрические поля.
+
+\vspace{0.1cm}
+
+\textit{Методы исследования} ~--- использование свойств аналитических функций комплексного переменного.
+
+\vspace{0.1cm}
+
+\textit{Цель работы} ~--- расчёт потенциалов заряженных.
+
+\vspace{0.1cm}
+
+\textit{Результаты работы}:
+\begin{itemize}
+\item Выведена формула для комплексной напряжённости поля зарядов, лежащих на прямой;
+\item Найдены выражения для комплексных потенциалов различных конфигураций двумерных электрических полей;
+\item Построены графики изолиний для соответствующих полей.
+\end{itemize}
+
+\newpage
+
+\centerline{\textbf{РЭФЕРАТ}}
+\vspace{0.3cm}
+
+\textit{Курсавая работа}, стр. 17, крынiц 2.
+
+\vspace{0.1cm}
+
+{ ЭЛЕКТРАСТАТЫКА, ЭЛЕКТРЫЧНАЕ ПОЛЕ, МЕТАД КАНЧАТКОВЫХ ЭЛЕМЕНТАУ, АСIМПТАТЫЧНЫЯ МЕЖАВЫЯ УМОВЫ, РАУНАННЕ ЛАПЛАСА, FENICS, PYTHON }
+
+\vspace{0.1cm}
+
+\textit{Аб'ект даследавання} ~--- двухмерныя электрычныя палі.
+
+\vspace{0.1cm}
+
+\textit{Метады даследвання} ~--- выкарыстанне ўласцівасцей аналітычных функцый комплекснага пераменнага.
+
+\vspace{0.1cm}
+
+\textit{Мэта работы} ~--- разлік асноўных канфігурацый двухмерных электрычных палёў з выкарыстаннем функцый комплекснага пераменнага.
+
+\vspace{0.1cm}
+
+\textit{Вынiкi работы}:
+\begin{itemize}
+\item Выведзена формула для комплекснай напружанасці поля зарадаў, якія ляжаць на прамой;
+\item Знойдзены выразы для комплексных патэнцыялаў розных канфігурацый двухмерных электрычных палёў;
+\item Пабудаваны графікі ізаліній для адпаведных палёў.
+\end{itemize}
+
+\newpage
+
+%\chapter* {Abstract}
+\centerline{\textbf{ABSTRACT}}
+\vspace{0.3cm}
+
+\textit {The course project}, pp. 17, sources 2.
+
+\vspace {0.1cm}
+
+{ELECTROSTATICS, ELECTRIC FIELD, FINITE ELEMENT METHOD, ASYMPTOTIC BOUDARY CONDITIONS, LAPLACE'S EQUATION, FENICS, PYTHON }
+
+\vspace {0.1cm}
+
+\textit {Subject of research} --- two-dimensional electric fields.
+
+\vspace {0.1cm}
+
+\textit {Methods} --- using properties of analytic functions of complex variables.
+
+\vspace {0.1cm}
+
+\textit {The purpose} --- calculation of basic configurations of two-dimensional electric field using a complex function.
+
+\vspace {0.1cm}
+
+\textit {The results}:
+\begin {itemize}
+\item The formula for the complex field intensity charges lying on the line;
+\item Formulas for the complex potentials of different configurations of two-dimensional electric field;
+\item Contour plots for the corresponding fields.
+\end {itemize}

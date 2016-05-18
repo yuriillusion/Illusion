@@ -1,0 +1,44 @@
+\newpage
+\chapter{Расчёт потенциала заряженного кругового диска}
+\section{Постановка задачи}
+\begin{equation}
+	\begin{cases}
+		\Delta u = 0,\\
+		u|_{\Gamma}=u_0,\\
+		u\xrightarrow[r\rightarrow\infty]{}0.
+	\end{cases}
+\end{equation}
+
+Заменим условие на бесконечности условием на достаточно большом радиусе $R$, так как заряженный диск на больших расстояниях можно считать точечным зарядом.
+
+Воспользуемся тем, что решение не зависит от $\varphi$, симметрично относительно $\rho=0$ и $z=0$ и сведём трёхмерную задачу к двухмерной задаче на прямоугольнике $[0, R]\times[0,R]$.
+\begin{equation}\label{disk_problem}
+	\begin{cases}
+		\Delta u = 0,\\
+		\pdv{u}{\rho}\Bigr|_{\rho=0}=0,\\
+		\pdv{u}{z}\Bigr|_{z=\pm 0}=I_{[0,r]}\cfrac{\sigma}{2\varepsilon_0},\\
+		u|_{\Gamma_D}=\cfrac{\sigma r^2}{4 \varepsilon_0}\cfrac{1}{r}.
+	\end{cases}
+\end{equation}
+
+\section{Вариационная формулировка задачи}
+Оператор Лапласа в цилиндрических координатах:
+\begin{equation}
+	\Delta u = \cfrac{1}{\rho}\cfrac{\partial}{\partial \rho}\left(\rho\cfrac{\partial u}{\partial \rho}\right) + \cfrac{1}{\rho^2}\cfrac{\partial^2u}{\partial \varphi^2}+\cfrac{\partial^2u}{\partial z^2}.
+\end{equation}
+
+Домножим уравнение $\Delta u = 0$ на пробную функцию $v$ и проинтегрируем по области $\Omega = (0,R)\times(0,h)$ и рассмотрим левую часть:
+\begin{equation}\label{laplace_cylindric}
+	\int\limits_{\Omega_{X}} (\Delta_{(x,y,z)} u) v \dd{\Omega_{X}} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \cfrac{\partial^2u}{\partial \rho^2}v\rho + \cfrac{\partial^2u}{\partial z^2}v\rho \right) \dd{\Omega} = \int\limits_{\Omega} \left( \cfrac{\partial u}{\partial \rho}v + \Delta u v\rho \right) \dd{\Omega}.
+\end{equation}
+\begin{equation}\label{sub_laplace_cylindric}
+	\int\limits_{\Omega} \left( \Delta u v\rho \right) \dd{\Omega} = \int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v\rho}\dd{\Omega}=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}-\int\limits_{\Omega}\pdv{u}{\rho}v\dd{\Omega}.
+\end{equation}
+Подставляя (\ref{sub_laplace_cylindric}) в (\ref{laplace_cylindric}), получаем
+\begin{equation}
+	a(u,v)=\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}-\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}.
+\end{equation}
+Таким образом, слабая формулировка задачи (\ref{disk_problem}):
+\begin{equation}\label{disk_weak}
+	\int\limits_{\Omega}\grad{u}\grad{v}\rho\dd{\Omega}-\int\limits_{\partial \Omega}\rho v \pdv{u}{n}\dd{S}=0.
+\end{equation}

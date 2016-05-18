@@ -1,0 +1,13 @@
+\input{preamble.tex}
+
+\begin{document}
+\begin{large}
+
+\input{title_page.tex}
+\input{table_of_contents.tex}
+\input{intro.tex}
+\input{breaks_problem.tex}
+\input{test_chapter.tex}
+
+\end{large}
+\end{document}
